@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 class FetchData extends Component {
   constructor() {
+    super()
     this.state = {}
   }
   componentWillMount() {
