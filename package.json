@@ -1,0 +1,26 @@
+{
+  "name": "babel-react-ie8",
+  "version": "0.0.0",
+  "description": "transform es2015+ to support  IE 8+",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --host=0.0.0.0",
+    "start": "webpack-dev-server --host=0.0.0.0",
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "es3ify-loader": "^0.2.0",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  }
+}
