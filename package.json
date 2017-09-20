@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "transform es2015+ to support IE 8+",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --host=0.0.0.0 --public 192.168.3.187",
-    "start": "webpack-dev-server --host=0.0.0.0 --public 192.168.3.187",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --host=0.0.0.0",
+    "start": "webpack-dev-server --host=0.0.0.0",
     "build": "webpack"
   },
   "license": "MIT",
