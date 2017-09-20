@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 class FetchData extends Component {
-  consturctor() {
+  constructor() {
     this.state = {}
   }
   componentWillMount() {
