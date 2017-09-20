@@ -23,7 +23,7 @@ if (!DEBUG) {
 
 module.exports = {
   entry: [
-    'babel-polyfill', './src/index'
+    'babel-polyfill', 'es6-promise', 'fetch-ie8', './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
