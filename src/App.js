@@ -1,7 +1,7 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
-import FetchData from './FetchData';
-import ObjectAssign from './ObjectAssign';
+import HelloWorld from './Components/HelloWorld';
+import FetchData from './Components/FetchData';
+import ObjectAssign from './Components/ObjectAssign';
 
 export default() => (
   <div>
