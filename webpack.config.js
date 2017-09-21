@@ -1,53 +1,53 @@
-var path = require('path'),
-  webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var DEBUG = process.env.NODE_ENV === 'development';
+const DEBUG = process.env.NODE_ENV === 'development';
 
-var plugins = [];
+const plugins = [];
 
 if (!DEBUG) {
   plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: {
       properties: false,
-      warnings: false
+      warnings: false,
     },
     output: {
-      quote_keys: true
+      quote_keys: true,
     },
     mangle: {
-      screw_ie8: false
+      screw_ie8: false,
     },
-    sourceMap: false
+    sourceMap: false,
   }));
 }
 
 module.exports = {
   entry: [
-    'babel-polyfill', 'es6-promise', 'fetch-ie8', './src/index'
+    'babel-polyfill', 'es6-promise', 'fetch-ie8', './src/index',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
+        loader: 'babel-loader',
+      },
     ],
     postLoaders: [
       {
         test: /\.js$/,
-        loaders: ['es3ify-loader']
-      }
-    ]
+        loaders: ['es3ify-loader'],
+      },
+    ],
   },
-  plugins: plugins,
+  plugins,
   debug: DEBUG,
   devtool: DEBUG
     ? 'source-map'
-    : false
+    : false,
 };

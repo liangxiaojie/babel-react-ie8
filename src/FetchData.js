@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 
 class FetchData extends Component {
   constructor() {
-    super()
-    this.state = {}
+    super();
+    this.state = {};
   }
   componentWillMount() {
     fetch('data.json')
-    .then(res => res.json())
-    .then(res => {
-      this.setState(res);
-    });
+      .then(res => res.json())
+      .then((res) => {
+        this.setState(res);
+      });
   }
   render() {
     return (
@@ -22,8 +22,8 @@ class FetchData extends Component {
           </code>
         </pre>
       </div>
-    )
+    );
   }
 }
 
-export default FetchData
+export default FetchData;
