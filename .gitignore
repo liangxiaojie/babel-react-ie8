@@ -1,7 +1,14 @@
+# System
 .DS_Store
 
-*.log
-
+# Node Files
 node_modules
 
+# Logs
+*.log
+
+# Cache
+.eslintcache
+
+# Project
 dist

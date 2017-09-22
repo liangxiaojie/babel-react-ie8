@@ -6,8 +6,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --host=0.0.0.0",
     "start": "webpack-dev-server --host=0.0.0.0",
     "build": "webpack",
-    "lint": "eslint . --fix",
-    "precommit": "lint-staged"
+    "lint": "eslint . --cache",
+    "lint-staged": "lint-staged"
   },
   "license": "MIT",
   "dependencies": {
@@ -36,6 +36,10 @@
     "webpack-dev-server": "^1.16.5"
   },
   "lint-staged": {
-    "**/*.js": "eslint"
-  }
+    "*.js": [
+      "eslint --cache --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged"
 }
