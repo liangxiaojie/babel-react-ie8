@@ -1,9 +1,9 @@
 import React from 'react';
-import HelloWorld from './Components/HelloWorld';
-import FetchData from './Components/FetchData';
-import ObjectAssign from './Components/ObjectAssign';
+import HelloWorld from './components/HelloWorld';
+import FetchData from './components/FetchData';
+import ObjectAssign from './components/ObjectAssign';
 
-export default() => (
+const App = () => (
   <div>
     <HelloWorld />
     <hr />
@@ -12,3 +12,5 @@ export default() => (
     <ObjectAssign />
   </div>
 );
+
+export default App;
